@@ -105,6 +105,7 @@ function chat() {
     "model": "gpt-3.5-turbo",
     "messages": _message,
     "max_tokens": config.maxTokens,
+    "temperature": 0.6,
     "stream": config.stream,
   }, (data) => {
     let msg = data.choices[0].delta || data.choices[0].message || {}
